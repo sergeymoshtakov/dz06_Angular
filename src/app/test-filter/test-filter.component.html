@@ -1,0 +1,17 @@
+<input type="text" [(ngModel)]="search">
+
+<select [(ngModel)]="selectedFilter">
+    <option value="name">Name</option>
+    <option value="description">Description</option>
+</select>
+
+<h2>Products</h2>
+<div class="row">
+    @for (product of products | filter: search : selectedFilter; track $index) {
+        <div class="item">
+            <p>{{product.name}}</p>
+            <p>{{product.price}}</p>
+            <p>{{product.description}}</p>
+        </div>
+    }
+</div>

@@ -1,0 +1,9 @@
+<p>Name: <span><input type="text" [(ngModel)]="name"></span></p>
+<p>Age: <span><input type="text" [(ngModel)]="age"></span></p>
+<p>{{currentIndex}}</p>
+
+<button (click)="addUser()" [disabled]="isSaveButtonActive">Add user</button>
+<br>
+<br>
+<button (click)="saveUser()" [disabled]="!isSaveButtonActive">Save user</button>
+<hr>

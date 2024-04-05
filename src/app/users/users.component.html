@@ -1,0 +1,11 @@
+<div class="container">
+    <h2>Users</h2>
+    <app-user-add [isSaveButtonActive]="isSaveButtonActive" [currentIndex]="currentIndex"></app-user-add>
+    <div class="row">
+        @for(user of users; track user.id){
+            <div class="item">
+                <app-user [user]="user" (deleteUser)="deleteUser(user.id)" (editUser)="editUser(user.id)"></app-user>
+            </div>
+        }
+    </div>
+</div>
